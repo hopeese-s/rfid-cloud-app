@@ -52,7 +52,7 @@ def handle_scan():
         scan_log.pop()
     
     # Broadcast to all clients
-    socketio.emit('new_scan', entry, broadcast=True)
+    socketio.emit('new_scan', entry)
     return ('', 204)
 
 if __name__ == '__main__':
